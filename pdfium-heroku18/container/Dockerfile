@@ -8,11 +8,14 @@ RUN \
     subversion \
     pkg-config \
     python \
+    python-pip \
     libtool \
     cmake \
     glib2.0-dev \
     libatspi2.0-dev \
     wget 
+
+RUN pip install --upgrade b2 tatsu
 
 # Create a default, non-root 'build' user
 # we must have an actual user, not just -u etc., since gclient writes to
